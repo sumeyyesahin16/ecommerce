@@ -9,7 +9,7 @@ class MainController extends Controller
 {
     public function index()
     {
-        $categories=Category::all();
+        $categories=Category::whereRaw('top_id is null')->get();
         return view('index',compact('categories'));
     }
 }

@@ -2,6 +2,8 @@
 @section('title','Sepet')
 @section('content')
 
+
+
     <div class="container">
         <div class="bg-content">
             <h2>Sepet</h2>

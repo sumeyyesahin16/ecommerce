@@ -10,9 +10,9 @@
                     <div class="list-group categories">
 
                         @foreach($categories as $category)
-                        <a href="{{route('category',$category->category_name)}}" class="list-group-item">
+                        <a href="{{route('category',$category->slug_categoryname)}}" class="list-group-item">
                             <i class="fa fa-arrow-circle-o-right"></i>
-                            {{$category->category_name}}</a>
+                            {{$category->slug_categoryname}}</a>
                             @endforeach()
 
                     </div>

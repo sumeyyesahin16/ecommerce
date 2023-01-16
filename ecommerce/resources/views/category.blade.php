@@ -4,20 +4,22 @@
 
     <div class="container">
         <ol class="breadcrumb">
-            <li><a href="#">Anasayfa</a></li>
-            <li><a href="#">Kategori</a></li>
-            <li class="active">Kategori</li>
+            <li><a href="/">Anasayfa</a></li>
+            <li class="active"></li>
         </ol>
         <div class="row">
             <div class="col-md-3">
                 <div class="panel panel-default">
-                    <div class="panel-heading">Kategori Adı</div>
+                    <div class="panel-heading"></div>
                     <div class="panel-body">
                         <h3>Alt Kategoriler</h3>
                         <div class="list-group categories">
-                            <a href="#" class="list-group-item"><i class="fa fa-television"></i> Alt Kategori</a>
-                            <a href="#" class="list-group-item"><i class="fa fa-television"></i> Alt Kategori</a>
-                            <a href="#" class="list-group-item"><i class="fa fa-television"></i> Alt Kategori</a>
+                            @foreach($sub_categories as $sub_category)
+                            <a href="{{route('category',$sub_category)}}" class="list-group-item">
+                                <i class="fa fa-television"></i>
+                                {{$sub_category->category_name}}
+                            </a>
+
                         </div>
                         <h3>Fiyat Aralığı</h3>
                         <form>
@@ -39,6 +41,7 @@
                     </div>
                 </div>
             </div>
+
             <div class="col-md-9">
                 <div class="products bg-content">
                     @if(count($products)>0)
